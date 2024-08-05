@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+     .divclass{
+        background-color: rgb(189, 160, 216);
+        text-align: center;
+     }
+     #ip,#ip2,#value{
+        height:100%;
+        width:70%;
+     }
+     ::placeholder{
+        color: darkslateblue;
+        background-color: lightgoldenrodyellow;
+     }
+     input{
+        height: max-content;
+        border-radius: 30px;
+     }
+    #myId{
+     background-color: darkblue;
+
+     }
+     #str{
+      background-color: rgb(250, 238, 60);
+      text-align:center;
+     }
+     #str1,#str2{
+      width:70%;
+     }
+     button{
+      height:50%;
+      width:10%;
+
+     }
+     #todo{
+      background-color: rgb(87, 129, 115);
+      text-align: center;
+     }
+    </style>
+<div class="divclass">
+   <h1>Arithemetic operations</h1>
+    <p>Enter value 1:</p>
+    <input  id="ip" type="number" placeholder="Add..." height="100%">
+    <p>Enter Value 2:</p>
+    <input id="ip2" type="number" placeholder="Add..."><br>
+    <button id="click">Submit</button>
+</div>
+<div id="str">
+  <h1> String Operations</h1>
+     <p>Enter first name</p><br>
+     <input id="str1" type="text" placeholder="FirstName here..."><br>
+     <p>Enter LastName</p>
+     <input id="str2" type="text" placeholder="LastName here..."><br>
+     <button id="clickme">Submit</button>
+</div>
+<div id="todo">
+   <h1>To DO list using array</h1>
+   <p>Enter something...</p><br>
+   <input id="value" type="text" placeholder="Add.."><br>
+    <button id="arrays">Submit</button>
+    <ul id="myUL">
+      <li></li>
+    </ul>
+</div>
+
+     <script>
+     function addData(){
+      let v=document.getElementById("ip");
+      console.log(v);
+        let v1=document.getElementById("ip").value;
+       // console.log(v1);
+        let v2=document.getElementById("ip2").value;
+        let v3=parseFloat(v1)+parseFloat(v2);
+        alert("sum is "+(parseFloat(v1)+parseFloat(v2))+"\nsubtraction is "+(parseFloat(v1)-parseFloat(v2))+"\nmultiplication is "+(parseFloat(v1)*parseFloat(v2)));
+        document.style.backgroundColor="blue";
+     }
+    var ans=document.getElementById("click");
+    console.log(ans);
+    ans.onclick=addData;
+    function addStr(){
+      let s1=document.getElementById("str1").value;
+      let s2=document.getElementById("str2").value;
+      alert("fullname is:"+s1+" "+s2);
+
+
+    }
+    function arraytodo(){
+    var strans=document.getElementById("clickme");
+    strans.onclick=addStr;
+    var arrayans=document.getElementById("value").value;
+    alert(arrayans+" is added");
+    }
+var arrayans=document.getElementById("arrays");
+arrayans.onclick=arraytodo;
+    </script>
+
+  
+</body>
+</html>
